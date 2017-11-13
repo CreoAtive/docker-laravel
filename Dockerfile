@@ -4,7 +4,7 @@ FROM bernhardesperester/docker-apache-php:latest
 MAINTAINER Bernhard Esperester <bernhard@esperester.de>
 
 # install laravel / composer support
-RUN apt-get update && apt-get -y install php-zip php-gd php-mbstring git && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get -y install php-curl php-zip php-gd php-mbstring git && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # add config
 ADD 000-laravel.conf /etc/apache2/sites-available/
